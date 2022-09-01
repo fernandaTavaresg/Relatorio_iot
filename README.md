@@ -78,17 +78,17 @@ Para a implementação do dispositivos utilizamos:
 ### WATSON IBM
 Possui diversas ferramentas que são bem completas e servem para ser implementadas por empresas. Baseado na computação cognitiva. Dentre alguns exemplos temos: reconhecimento de imagem, reconhecimento de voz, identificação de usuário, transformação de texto em voz e voz em texto, criação de chatbots e outros.
 ### Visual Recognition
-Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Taambém é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
+Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
   
 #### Implementação com projeto
-
+Esse Serviço de reconhecimento de imagens seria bastante útil na conservação de frutas e legumes, podemos através de imagens dispor de informações para o usuário, send treinado para cada tipo especifico e atribuindo também divisões dos produtos para dicas de ambiente, temperatura adequados. 
 ### Language Translator
 Capaz de traduzir textos entre vários idiomas diferentes e pode ser facilmente inserido em qualquer aplicação. 
 #### Utilização
   
 #### Implementação com projeto
-
+Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
 ### AZURE MICROSOFT
 #### Utilização
   
