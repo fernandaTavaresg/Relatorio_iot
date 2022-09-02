@@ -80,7 +80,6 @@ Para a comunicação do MQTT para o Node-RED, unimos os códigos dos dados do se
 
 ![Codigo Pronto](codigo.jpg)
 ![Codigo MQTT](codigoMQTT.jpg)
-![Codigo Saida](codigosaida.jpg)
 
 ##### Resultado do Dashboard com dados
 
