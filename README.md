@@ -64,13 +64,13 @@ Para a implementação do dispositivos utilizamos:
 
 Realizamos a montagem do dispositivo no ESP8266 com NodeMCU, e conectando com o sensor DHT11, para obtenção dos dados de Temperatura e Umidade e realizando a conexão com o broker MQTT também, para envio de dados para exibição na interface dashboard do Node-RED, sendo que alguns passos não foram finalizados. Na imagem a seguir temos o ESP8266, com oo DHT e Leds também (mas não foram implementados), o cabo USB para carregamento.
 
- ![ESP8266](ESP8266.jpg)
+ ![ESP8266](ESP1.jpg)
 
 Para realização de testes também executamos o código no Arduino IDE, para obtenção dos dados do sensor com o ESP8266, o código e a saída foram iguais a realização no dispositivo do Arduino.
 Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dados para o broker, para posteriormente a comunicação ao Node-RED e a exibição desses dados em uma interface gráfica para os usuários. Também foi necessário a utilização de uma rede wifi para o ESP8266. O comando e saída para o MQTT, estão a seguir. 
 
-![Codigo MQTT](CodigoMQTT.jpg)
-![Codigo MQTT](MQTTsaida.jpg)
+![Codigo MQTT](MQTT1.jpg)
+![Codigo MQTT](MQTT2.jpg)
 
 ### Aplicação dos Serviços
 
@@ -79,14 +79,14 @@ Possui diversas ferramentas que são bem completas e servem para ser implementad
 ### Visual Recognition
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
-  ![Serviço IBM](servico1.png)
-  ![Serviço IBM](servico3.png)
+  ![Serviço IBM](servico11.png)
+  ![Serviço IBM](servico33.png)
 #### Implementação com projeto
 Esse Serviço de reconhecimento de imagens seria bastante útil na conservação de frutas e legumes, podemos através de imagens dispor de informações para o usuário, send treinado para cada tipo especifico e atribuindo também divisões dos produtos para dicas de ambiente, temperatura adequados. 
 ### Language Translator
 Capaz de traduzir textos entre vários idiomas diferentes e pode ser facilmente inserido em qualquer aplicação. 
 #### Utilização
-  ![Serviço IBM](servico2.png)
+  ![Serviço IBM](servico22.png)
 
 #### Implementação com projeto
 Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
