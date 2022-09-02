@@ -73,7 +73,7 @@ Possui diversas ferramentas que são bem completas e servem para ser implementad
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
   ![Serviço IBM](servico1.png)
-
+  ![Serviço IBM](servico3.png)
 #### Implementação com projeto
 Esse Serviço de reconhecimento de imagens seria bastante útil na conservação de frutas e legumes, podemos através de imagens dispor de informações para o usuário, send treinado para cada tipo especifico e atribuindo também divisões dos produtos para dicas de ambiente, temperatura adequados. 
 ### Language Translator
@@ -115,3 +115,11 @@ Site: Filipe Flop - Montagem do sensor DHT11 no arduino. acesso em: https://www.
 
 Site: Blog da Robotica - Sensor DHT11. acesso em: https://www.blogdarobotica.com/2020/10/29/medindo-temperatura-e-umidade-usando-o-sensor-dht11/
 
+Blog da OnCase. acesso em: https://www.oncase.com.br/blog/ferramentas-analiticas/tudo-sobre-ibm-watson/#:~:text=O%20IBM%20Watson%20%C3%A9%2C%20na,criar%20seus%20pr%C3%B3prios%20sistemas%20cognitivos.
+EasyJur. acesso em: https://easyjur.com/blog/utilizando-o-watson-da-ibm-no-desenvolvimento-de-solucoes-na-area-juridica/
+CronApp. acesso em: https://blog.cronapp.io/conheca-o-watson/
+https://www.oncase.com.br/blog/ferramentas-analiticas/tudo-sobre-ibm-watson/
+https://cloud.ibm.com/registration/payment?state=%2Fdeveloper%2Fwatson%2Flaunch-tool%2Fconversation
+https://cloud.ibm.com/docs/language-translator?topic=language-translator-gettingstarted&locale=pt-BR
+https://www.youtube.com/watch?v=0GpF39U9iaQ
+https://www.youtube.com/watch?v=amNOs-OT3eA
