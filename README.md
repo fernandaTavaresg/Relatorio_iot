@@ -70,6 +70,8 @@ Realizamos a montagem do dispositivo no ESP8266 com NodeMCU, e conectando com o 
 ##### Testes de dados do sensor
 Para realização de testes também executamos o código no Arduino IDE, para obtenção dos dados do sensor com o ESP8266, o código e a saída foram iguais a realização no dispositivo do Arduino.
 
+![Codigo Sensor](codigosensor.jpg)
+
 ##### Comunicação com protocolo MQTT
 Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dados para o broker, para posteriormente a comunicação ao Node-RED e a exibição desses dados em uma interface gráfica para os usuários. Também foi necessário a utilização de uma rede wifi para o ESP8266. O comando e saída para o MQTT, estão a seguir. 
 
