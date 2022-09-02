@@ -66,7 +66,7 @@ Para a implementação do dispositivos utilizamos:
 Realizamos a montagem do dispositivo no ESP8266 com NodeMCU, e conectando com o sensor DHT11, para obtenção dos dados de Temperatura e Umidade e realizando a conexão com o broker MQTT também, para envio de dados para exibição na interface dashboard do Node-RED, sendo que alguns passos não foram finalizados. Na imagem a seguir temos o ESP8266, com oo DHT e Leds também (mas não foram implementados), o cabo USB para carregamento.
 
  ![ESP8266](ESP1.jpg)
-  ![ESP8266](esp8266.jpg)
+  ![ESP8266](esp.jpg)
 ##### Testes de dados do sensor
 Para realização de testes também executamos o código no Arduino IDE, para obtenção dos dados do sensor com o ESP8266, o código e a saída foram iguais a realização no dispositivo do Arduino.
 
