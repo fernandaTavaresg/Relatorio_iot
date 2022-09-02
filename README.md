@@ -70,9 +70,9 @@ Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dad
 ![Codigo MQTT](MQTT1.jpg)
 ![Codigo MQTT](MQTT2.jpg)
 
-### Aplicação dos Serviços
+## Aplicação dos Serviços
 
-### WATSON IBM (Fernanda)
+### WATSON IBM 
 A plataforma Watson é a combinação entre a tecnologia de Inteligência Artificial e a linguagem humana para a análise de enormes quantidades de dados e a obtenção rápida de respostas. E é neste ponto que o Watson da IBM entra. Por ser um sistema fundamentado em computação cognitiva, ele é capaz de interpretar esses dados, aprender com eles e criar linhas de raciocínio a partir deles. É por meio desse conceito que diversas indústrias estão se reinventando com o uso do Watson, tais como o varejo, os serviços bancários, a saúde e o setor de viagens, por exemplo. 
 Possui diversas ferramentas que são bem completas e servem para ser implementadas por empresas. Baseado na computação cognitiva. Dentre alguns exemplos temos: reconhecimento de imagem, reconhecimento de voz, identificação de usuário, transformação de texto em voz e voz em texto, criação de chatbots e outros.
 ### Visual Recognition
@@ -96,7 +96,7 @@ Nesse exemplo com o código em python, utilizamos as credenciais do IBM, e inser
 #### Implementação com projeto
 Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
 
-### AZURE MICROSOFT (Poliana)
+### AZURE MICROSOFT
 A plataforma de nuvem Azure consiste em mais de 200 produtos e serviços de nuvem projetados para ajudar você a dar vida às novas soluções para resolver os desafios atuais e criar o futuro. Crie, execute e gerencie aplicativos em várias nuvens, locais e na borda, com as ferramentas e as estruturas de sua escolha. Azure fornece a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Devido à natureza de recursos compartilhados do serviço, um cliente barulhento “tomando” os recursos pode afetar o desempenho de outro cliente. Se meus dispositivos de IoT (pessoais) estiverem atacando o serviço tentando enviar mensagens cinco vezes por segundo, você poderá descobrir que seus dispositivos também têm dificuldade em se conectar porque o serviço está ocupado tentando lidar com a enxurrada de minhas solicitações de conexão.
 
 #### Utilização
