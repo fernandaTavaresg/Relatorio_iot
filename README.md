@@ -74,8 +74,12 @@ Para a implementação do dispositivos utilizamos:
 - Cabo USB para ESP8266
 
 
+
+
+
 ### Aplicação dos Serviços
-### WATSON IBM
+
+### WATSON IBM (Fernanda)
 Possui diversas ferramentas que são bem completas e servem para ser implementadas por empresas. Baseado na computação cognitiva. Dentre alguns exemplos temos: reconhecimento de imagem, reconhecimento de voz, identificação de usuário, transformação de texto em voz e voz em texto, criação de chatbots e outros.
 ### Visual Recognition
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
@@ -89,16 +93,35 @@ Capaz de traduzir textos entre vários idiomas diferentes e pode ser facilmente 
   
 #### Implementação com projeto
 Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
-### AZURE MICROSOFT
+
+### AZURE MICROSOFT (Poliana)
+A plataforma de nuvem Azure consiste em mais de 200 produtos e serviços de nuvem projetados para ajudar você a dar vida às novas soluções para resolver os desafios atuais e criar o futuro. Crie, execute e gerencie aplicativos em várias nuvens, locais e na borda, com as ferramentas e as estruturas de sua escolha. Azure fornece a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Devido à natureza de recursos compartilhados do serviço, um cliente barulhento “tomando” os recursos pode afetar o desempenho de outro cliente. Se meus dispositivos de IoT (pessoais) estiverem atacando o serviço tentando enviar mensagens cinco vezes por segundo, você poderá descobrir que seus dispositivos também têm dificuldade em se conectar porque o serviço está ocupado tentando lidar com a enxurrada de minhas solicitações de conexão.
+
 #### Utilização
-  
+  As propriedades podem ser lidas ou definidas no hub IoT e podem ser usadas para enviar notificações quando uma ação for concluída. Um exemplo de uma propriedade específica em um dispositivo é a temperatura. A temperatura pode ser uma propriedade gravável que pode ser atualizada no dispositivo ou lida de um sensor de temperatura conectado ao dispositivo.O Hub IoT é um recurso compartilhado, o que significa que o Hub IoT que você provisiona é executado no mesmo conjunto de hardware que executa outros hubs IoT. Isso nos permite (Azure) fornecer a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Para habilitar propriedades no Hub IoT usa dispositivos gêmeos ou ‘Plug and Play’. Os dispositivos gêmeos armazenam os metadados específicos do dispositivo na nuvem. Por exemplo, o local de implantação de uma máquina de vendas; Relata informações de estado atual, como recursos disponíveis e condições do aplicativo do dispositivo. Por exemplo, se um dispositivo é conectado ao hub IoT via celular ou Wi-Fi e sincroniza o estado dos fluxos de trabalho de longa execução entre o aplicativo do dispositivo e o aplicativo do back-end.O IoT Plug and Play permite que os criadores de solução integrem dispositivos IoT às suas soluções sem nenhuma configuração manual. No núcleo do IoT Plug and Play há um modelo de dispositivo que um dispositivo usa para anunciar suas funcionalidades a um aplicativo habilitado para IoT Plug and Play
+
 #### Implementação com projeto
-     
+O objetivo é levar os dados para a nuvem primeiro e depois processá-los de acordo com suas necessidades de negócios. Planejamos nossa capacidade em torno do uso pretendido do serviço, em vez do uso de pico no pior caso (também conhecido como, se todos os clientes maximizarem suas unidades exatamente ao mesmo tempo).
+
 ### Considerações finais
 
 Buscando através desse projeto prático controlar os produtos e diminuir o desperdício. Emitindo dados do ambiente, relacionados a temperatura e umidade, com o objetivo de coletar esses dados e posteriormente enviar os dados obtidos para o broker MQTT e exibir em um dashboard para acesso dos usuários. Consiste na implementação dos dispositivos em Arduino e ESP8266, com sensor DHT11. Alguns pontos podem ser melhorados, como a implementação com motor servo e leds de sinalização, o envio correto para o MQTT, e a exibição na interface do Node-Red.
 
 Como também é descrito sobre os serviços Iot, e sua utilização e possível implementação com o projeto. E como trabalhos futuros, realizar a implementação dos serviços com o projeto.
 
+#### Referências
 
+MICROSOFT AZURE (Brasil). INVENTE COM PROPÓSITO: considere suas bases de confiabilidade cobertas. Considere suas bases de confiabilidade cobertas. 2022. Disponível em: https://azure.microsoft.com/pt-br/. Acesso em: 22 jul. 2022.
+
+Artigo: Sistema de monitoramento de umidade de solo via web. acesso em: https://hto.ifsp.edu.br/portal/images/thumbnails/images/IFSP/Cursos/Coord_ADS/Arquivos/TCCs/2018/TCC_HumbertoAntonioFerrisPereira_HT1320203.pdf
+
+Artigo: Sistema IoT para Monitoramento de Temperatura e UmidadeAmbientes e Acionamento Remoto de Cargas. acesso em: https://sol.sbc.org.br/index.php/eripi/article/view/5173/5079
+
+Site: Flavio Babos - Montagem do servo motor no Arduino. acesso em: https://flaviobabos.com.br/servo-motor-arduino/
+
+Site: Filipe Flop - Montagem do Led no arduino. acesso em: https://www.filipeflop.com/blog/aprenda-a-piscar-um-led-com-arduino/
+
+Site: Filipe Flop - Montagem do sensor DHT11 no arduino. acesso em: https://www.filipeflop.com/blog/monitorando-temperatura-e-umidade-com-o-sensor-dht11/#:~:text=Conectando%20o%20sensor%20DHT11%20ao%20Arduino%3A&text=Se%20desejar%2C%20pode%2Dse%20adicionar,e%20o%20pino%20de%20dados.&text=Conecte%20o%20pino%20de%20dados,alterar%20por%20outro%20se%20desejar
+
+Site: Blog da Robotica - Sensor DHT11. acesso em: https://www.blogdarobotica.com/2020/10/29/medindo-temperatura-e-umidade-usando-o-sensor-dht11/
 
