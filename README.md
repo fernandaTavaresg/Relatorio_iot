@@ -11,13 +11,16 @@ TEMA: SERVIÇOS IOT E IMPLEMENTAÇÃO
 
 ### Introdução
 
-Devido ao grande número de desperdicios com alimentos (frutas e legumes), que acontece diariamente, buscando formas de reduzir esses dados, seja no ambiente, transporte e até mesmo disponibilizando conhecimento para os transportadores, comerciantes e outros usuários. Como forma de solução a ideia é a criação de um pequeno projeto prático utilizando: Arduino Uno e sensor DHT11 (Umidade e temperatura), leds (amarelo e verde) e entre outro materias. Posteriomente a implementação com o Esp8266, para comunicação com MQTT.
+Devido ao grande número de desperdicios com alimentos (frutas e legumes), que acontece diariamente, buscando formas de reduzir esses dados, seja no ambiente, transporte e até mesmo disponibilizando conhecimento para os transportadores, comerciantes e outros usuários. Como forma de solução a ideia é a criação de um pequeno projeto prático utilizando: Arduino Uno e sensor DHT11 (Umidade e temperatura), leds (amarelo e verde) e entre outro materias. Posteriomente a implementação com o Esp8266, para comunicação com MQTT e exibição desses dados na iterface gráfica para os usuários.
+
+Descrevendo também sobre Serviços IoT que foram estudados, principalmente da Watson IBM e da Azure Microsoft, como eles são utilizados e como podem ser implementados no nosso projeto futuramente.
+
+### Desenvolvimento
+
+Com o objetivo de gerenciar e controlar dados dos produtos (frutas e legumes), a partir da temperatura e umidade do ambiente que estão armazenados, visando reduzir dados de desperdicio. Primeiro fizemos para o arduino em que conseguimos obter os respectivos dados do ambiente, e posteriormente a conexão ao ESP8266 para a comunicação com o broker e o protocolo MQTT para envio desses dados para o Node-RED e o seu dashboard.
 
 Dentre os materiais e métodos para o desenvolvimento, também realizamos pesquisas diversas referente a construção e implementação do dispositivo em arduino, como os componentes utilizados, conexões e códigos; e também sobre o tema a ser desenvolvido, a conservação de frutas e hortaliças, condições que interferem nesses alimentos, dados referentes a temperatura, umidade relativa e ventilação do ar.
 
-Descrevendo também sobre Serviços IoT que foram estudados, principalmente da Watson IBM e da Azure Microsoft, como eles são utilizados e como podem ser implementados no nosso projeto.
-
-### Desenvolvimento
 
 #### Implementação do dispositivo (Arduino)
 
@@ -63,12 +66,29 @@ Para a implementação do dispositivos utilizamos:
 Realizamos a montagem do dispositivo no ESP8266 com NodeMCU, e conectando com o sensor DHT11, para obtenção dos dados de Temperatura e Umidade e realizando a conexão com o broker MQTT também, para envio de dados para exibição na interface dashboard do Node-RED, sendo que alguns passos não foram finalizados. Na imagem a seguir temos o ESP8266, com oo DHT e Leds também (mas não foram implementados), o cabo USB para carregamento.
 
  ![ESP8266](ESP1.jpg)
-
+##### Testes de dados do sensor
 Para realização de testes também executamos o código no Arduino IDE, para obtenção dos dados do sensor com o ESP8266, o código e a saída foram iguais a realização no dispositivo do Arduino.
+
+##### Comunicação com protocolo MQTT
 Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dados para o broker, para posteriormente a comunicação ao Node-RED e a exibição desses dados em uma interface gráfica para os usuários. Também foi necessário a utilização de uma rede wifi para o ESP8266. O comando e saída para o MQTT, estão a seguir. 
 
 ![Codigo MQTT](MQTT1.jpg)
 ![Codigo MQTT](MQTT2.jpg)
+
+##### Implementação do MQTT para Node-RED
+Para a comunicação do MQTT para o Node-RED, unimos os códigos dos dados do sensor e o de conexão do MQTT, inserimos os tópicos, utilizamos o broker do "test.mosquitto.org". Código e saída do terminal abaixo.
+
+![Codigo Pronto](codigo.jpg)
+![Codigo MQTT](codigoMQTT.jpg)
+![Codigo Saida](codigosaida.jpg)
+
+##### Resultado do Dashboard com dados
+
+Após a comunicação do MQTT e envio de dados para o broker, utilizamos o Node-RED no site do Heroku, e no flow adicionamos os nós com o MQTT IN e obtamos por adicionar gráficos gauge, para exibição desses dados de temperatura e umidade. Abaixo temos o flow e o resultado na interface gráfica do dashboard no grupo respectivo, para temperatura e umidade. Futuramente poderá ser incrementado outros critérios, relativos a acionamento de ventilação, sinalização com leds e outros fatores.
+
+
+![Node RED](nodered.jpg)
+![Dashboard](dashboard.jpg)
 
 ## Aplicação dos Serviços
 
@@ -78,7 +98,7 @@ Possui diversas ferramentas que são bem completas e servem para ser implementad
 ### Visual Recognition
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
-No exemplo de utilização a seguir, foi adicionado o flow do node-RED para a exibição no dashboard, e na imagem a seguir a reprodução em que foi necessário adicionar a imagem a ser anaalisada e o resultado foi exibido com as palavras-chaves relacionadas a partir da analise.
+No exemplo de utilização a seguir, foi adicionado o flow do node-RED para a exibição no dashboard, e na imagem a seguir a reprodução em que foi necessário adicionar a imagem a ser analisada e o resultado foi exibido com as palavras-chaves relacionadas a partir da analise.
 
   ![Serviço IBM](servico11.jpg)
   ![Serviço IBM](servico33.jpg)
@@ -100,7 +120,7 @@ Esse Serviço é bastante útil para no caso de tornar as aplicações para sere
 A plataforma de nuvem Azure consiste em mais de 200 produtos e serviços de nuvem projetados para ajudar você a dar vida às novas soluções para resolver os desafios atuais e criar o futuro. Crie, execute e gerencie aplicativos em várias nuvens, locais e na borda, com as ferramentas e as estruturas de sua escolha. Azure fornece a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Devido à natureza de recursos compartilhados do serviço, um cliente barulhento “tomando” os recursos pode afetar o desempenho de outro cliente. Se meus dispositivos de IoT (pessoais) estiverem atacando o serviço tentando enviar mensagens cinco vezes por segundo, você poderá descobrir que seus dispositivos também têm dificuldade em se conectar porque o serviço está ocupado tentando lidar com a enxurrada de minhas solicitações de conexão.
 
 #### Utilização
-  As propriedades podem ser lidas ou definidas no hub IoT e podem ser usadas para enviar notificações quando uma ação for concluída. Um exemplo de uma propriedade específica em um dispositivo é a temperatura. A temperatura pode ser uma propriedade gravável que pode ser atualizada no dispositivo ou lida de um sensor de temperatura conectado ao dispositivo.O Hub IoT é um recurso compartilhado, o que significa que o Hub IoT que você provisiona é executado no mesmo conjunto de hardware que executa outros hubs IoT. Isso nos permite (Azure) fornecer a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Para habilitar propriedades no Hub IoT usa dispositivos gêmeos ou ‘Plug and Play’. Os dispositivos gêmeos armazenam os metadados específicos do dispositivo na nuvem. Por exemplo, o local de implantação de uma máquina de vendas; Relata informações de estado atual, como recursos disponíveis e condições do aplicativo do dispositivo. Por exemplo, se um dispositivo é conectado ao hub IoT via celular ou Wi-Fi e sincroniza o estado dos fluxos de trabalho de longa execução entre o aplicativo do dispositivo e o aplicativo do back-end.O IoT Plug and Play permite que os criadores de solução integrem dispositivos IoT às suas soluções sem nenhuma configuração manual. No núcleo do IoT Plug and Play há um modelo de dispositivo que um dispositivo usa para anunciar suas funcionalidades a um aplicativo habilitado para IoT Plug and Play
+  As propriedades podem ser lidas ou definidas no hub IoT e podem ser usadas para enviar notificações quando uma ação for concluída. Um exemplo de uma propriedade específica em um dispositivo é a temperatura. A temperatura pode ser uma propriedade gravável que pode ser atualizada no dispositivo ou lida de um sensor de temperatura conectado ao dispositivo.O Hub IoT é um recurso compartilhado, o que significa que o Hub IoT que você provisiona é executado no mesmo conjunto de hardware que executa outros hubs IoT. Isso nos permite (Azure) fornecer a funcionalidade do Hub IoT a um preço mais baixo do que se fosse um recurso dedicado usando nossos data centers com mais eficiência. Para habilitar propriedades no Hub IoT usa dispositivos gêmeos ou ‘Plug and Play’. Os dispositivos gêmeos armazenam os metadados específicos do dispositivo na nuvem. Por exemplo, o local de implantação de uma máquina de vendas; Relata informações de estado atual, como recursos disponíveis e condições do aplicativo do dispositivo. Por exemplo, se um dispositivo é conectado ao hub IoT via celular ou Wi-Fi e sincroniza o estado dos fluxos de trabalho de longa execução entre o aplicativo do dispositivo e o aplicativo do back-end.O IoT Plug and Play permite que os criadores de solução integrem dispositivos IoT às suas soluções sem nenhuma configuração manual. No núcleo do IoT Plug and Play há um modelo de dispositivo que um dispositivo usa para anunciar suas funcionalidades a um aplicativo habilitado para IoT Plug and Play.
 
 #### Implementação com projeto
 O objetivo é levar os dados para a nuvem primeiro e depois processá-los de acordo com suas necessidades de negócios. Planejamos nossa capacidade em torno do uso pretendido do serviço, em vez do uso de pico no pior caso (também conhecido como, se todos os clientes maximizarem suas unidades exatamente ao mesmo tempo).
