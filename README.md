@@ -35,9 +35,7 @@ Na imagem a seguir, temos o dispositivo Arduino Uno que utilizamos e o sensor DH
 
 ![Imagem 3](Imagem3.jpg)
 
-Fizemos a montagem do DHT11 ao Arduino, com o protoboard, um resistor de 10k Ohms. O DHT11 possui 4 pinos, sendo eles: o primeiro (VCC), sendo ligado a alimentação da placa 5V. O segundo é o de dados, que conectamos ao resistor e também ao pino 2 do Arduino. o terceiro (NC) não é utilizado. e o quarto conectado ao terra (GND).
-
-Utilizamos o modelo de conexão da imagem 2.
+Fizemos a montagem do DHT11 ao Arduino, com o protoboard, um resistor de 10k Ohms. O DHT11 possui 4 pinos, sendo eles: o primeiro (VCC), sendo ligado a alimentação da placa 5V. O segundo é o de dados, que conectamos ao resistor e também ao pino 2 do Arduino. o terceiro (NC) não é utilizado. e o quarto conectado ao terra (GND). Utilizamos o modelo de conexão da imagem a seguir.
 
 ![Imagem 2](Image2.jpg)
 ![Imagem 5](Image5.jpg)
@@ -58,7 +56,7 @@ Para a implementação do dispositivos utilizamos:
 - Placa de Ensaio (Protoboard)
 - Sensor DHT11 (Umidade e Temperatura)
 - Resistores (220Ohms e 10 k Ohms)
-- Leds(não implementado)
+- Leds (não implementado)
 - Jumpers/fios (macho-macho)
 - Cabo USB para ESP8266
 
@@ -75,18 +73,25 @@ Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dad
 ### Aplicação dos Serviços
 
 ### WATSON IBM (Fernanda)
+A plataforma Watson é a combinação entre a tecnologia de Inteligência Artificial e a linguagem humana para a análise de enormes quantidades de dados e a obtenção rápida de respostas. E é neste ponto que o Watson da IBM entra. Por ser um sistema fundamentado em computação cognitiva, ele é capaz de interpretar esses dados, aprender com eles e criar linhas de raciocínio a partir deles. É por meio desse conceito que diversas indústrias estão se reinventando com o uso do Watson, tais como o varejo, os serviços bancários, a saúde e o setor de viagens, por exemplo. 
 Possui diversas ferramentas que são bem completas e servem para ser implementadas por empresas. Baseado na computação cognitiva. Dentre alguns exemplos temos: reconhecimento de imagem, reconhecimento de voz, identificação de usuário, transformação de texto em voz e voz em texto, criação de chatbots e outros.
 ### Visual Recognition
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
-  ![Serviço IBM](servico11.png)
-  ![Serviço IBM](servico33.png)
+No exemplo de utilização a seguir, foi adicionado o flow do node-RED para a exibição no dashboard, e na imagem a seguir a reprodução em que foi necessário adicionar a imagem a ser anaalisada e o resultado foi exibido com as palavras-chaves relacionadas a partir da analise.
+
+  ![Serviço IBM](servico11.jpg)
+  ![Serviço IBM](servico33.jpg)
+  
 #### Implementação com projeto
 Esse Serviço de reconhecimento de imagens seria bastante útil na conservação de frutas e legumes, podemos através de imagens dispor de informações para o usuário, send treinado para cada tipo especifico e atribuindo também divisões dos produtos para dicas de ambiente, temperatura adequados. 
+
 ### Language Translator
 Capaz de traduzir textos entre vários idiomas diferentes e pode ser facilmente inserido em qualquer aplicação. 
 #### Utilização
-  ![Serviço IBM](servico22.png)
+Nesse exemplo com o código em python, utilizamos as credenciais do IBM, e inserimos a linguagem de origem e a que deseja o resultado, seguido do texto que será traduzido. E o seu resultado é obtido na saída do terminal.
+
+  ![Serviço IBM](servico22.jpg)
 
 #### Implementação com projeto
 Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
@@ -108,27 +113,21 @@ Como também é descrito sobre os serviços Iot, e sua utilização e possível 
 
 #### Referências
 
+Filipe Flop (Brasil). Montagem do sensor DHT11 no arduino. Filipe Flop, 2013.  Disponível em: https://www.filipeflop.com/blog/monitorando-temperatura-e-umidade-com-o-sensor-dht11/#:~:text=Conectando%20o%20sensor%20DHT11%20ao%20Arduino%3A&text=Se%20desejar%2C%20pode%2Dse%20adicionar,e%20o%20pino%20de%20dados.&text=Conecte%20o%20pino%20de%20dados,alterar%20por%20outro%20se%20desejar Acesso em: 02 ago. 2022.
+
+Filipe Flop (Brasil). Monitoramento Iot NodeMCU e MQTT. Filipe Flop, 2016. Disponível em: https://www.filipeflop.com/blog/controle-monitoramento-iot-nodemcu-e-mqtt/ Acesso em: 20 ago. 2022.
+
+IBM WATSON (Brasil). Utilização de serviços, site oficial. IBM. Disponível em: https://cloud.ibm.com Acesso em: 10 ago. 2022.
+
+IFSP (Brasil). Sistema de monitoramento de umidade de solo via web. IFSP, 2021. Disponível em: https://hto.ifsp.edu.br/portal/images/thumbnails/images/IFSP/Cursos/Coord_ADS/Arquivos/TCCs/2018/TCC_HumbertoAntonioFerrisPereira_HT1320203.pdf Acesso em: 29 jul. 2022.
+
 MICROSOFT AZURE (Brasil). INVENTE COM PROPÓSITO: considere suas bases de confiabilidade cobertas. Considere suas bases de confiabilidade cobertas. 2022. Disponível em: https://azure.microsoft.com/pt-br/. Acesso em: 22 jul. 2022.
 
-Artigo: Sistema de monitoramento de umidade de solo via web. acesso em: https://hto.ifsp.edu.br/portal/images/thumbnails/images/IFSP/Cursos/Coord_ADS/Arquivos/TCCs/2018/TCC_HumbertoAntonioFerrisPereira_HT1320203.pdf
 
-Artigo: Sistema IoT para Monitoramento de Temperatura e UmidadeAmbientes e Acionamento Remoto de Cargas. acesso em: https://sol.sbc.org.br/index.php/eripi/article/view/5173/5079
+SBC (Brasil). Sistema IoT para Monitoramento de Temperatura e Umidade Ambientes e Acionamento Remoto de Cargas. SBC, 2020. Disponível em:  https://sol.sbc.org.br/index.php/eripi/article/view/5173/5079 Acesso em: 20 jul. 2022.
 
-Site: Flavio Babos - Montagem do servo motor no Arduino. acesso em: https://flaviobabos.com.br/servo-motor-arduino/
+Youtube. Aulão Watson Visual Recognition. Disponível em: https://www.youtube.com/watch?v=0GpF39U9iaQ Acesso em: 20 jul. 2022.
 
-Site: Filipe Flop - Montagem do Led no arduino. acesso em: https://www.filipeflop.com/blog/aprenda-a-piscar-um-led-com-arduino/
+Youtube. REST API Tutorial - IBM Watson - Language Translator. Disponível em: https://www.youtube.com/watch?v=amNOs-OT3eA Acesso em: 20 jul. 2022.
 
-Site: Filipe Flop - Montagem do sensor DHT11 no arduino. acesso em: https://www.filipeflop.com/blog/monitorando-temperatura-e-umidade-com-o-sensor-dht11/#:~:text=Conectando%20o%20sensor%20DHT11%20ao%20Arduino%3A&text=Se%20desejar%2C%20pode%2Dse%20adicionar,e%20o%20pino%20de%20dados.&text=Conecte%20o%20pino%20de%20dados,alterar%20por%20outro%20se%20desejar
 
-Site: Blog da Robotica - Sensor DHT11. acesso em: https://www.blogdarobotica.com/2020/10/29/medindo-temperatura-e-umidade-usando-o-sensor-dht11/
-
-Blog da OnCase. acesso em: https://www.oncase.com.br/blog/ferramentas-analiticas/tudo-sobre-ibm-watson/#:~:text=O%20IBM%20Watson%20%C3%A9%2C%20na,criar%20seus%20pr%C3%B3prios%20sistemas%20cognitivos.
-EasyJur. acesso em: https://easyjur.com/blog/utilizando-o-watson-da-ibm-no-desenvolvimento-de-solucoes-na-area-juridica/
-CronApp. acesso em: https://blog.cronapp.io/conheca-o-watson/
-https://www.oncase.com.br/blog/ferramentas-analiticas/tudo-sobre-ibm-watson/
-https://cloud.ibm.com/registration/payment?state=%2Fdeveloper%2Fwatson%2Flaunch-tool%2Fconversation
-https://cloud.ibm.com/docs/language-translator?topic=language-translator-gettingstarted&locale=pt-BR
-https://www.youtube.com/watch?v=0GpF39U9iaQ
-https://www.youtube.com/watch?v=amNOs-OT3eA
-
-https://www.filipeflop.com/blog/controle-monitoramento-iot-nodemcu-e-mqtt/
