@@ -25,7 +25,7 @@ Para a implementação do dispositivos utilizamos:
 - Arduino Uno
 - Placa de Ensaio (Protoboard)
 - Sensor DHT11 (Umidade e Temperatura)
-- Leds (Amarelo e Verde) (não implementado)
+- Leds (não implementado)
 - Servo Motor (não implementado) 
 - Resistores (220Ohms e 10 k Ohms)
 - Jumpers/fios (macho-macho)
@@ -58,10 +58,16 @@ Para a implementação do dispositivos utilizamos:
 - Placa de Ensaio (Protoboard)
 - Sensor DHT11 (Umidade e Temperatura)
 - Resistores (220Ohms e 10 k Ohms)
+- Leds(não implementado)
 - Jumpers/fios (macho-macho)
 - Cabo USB para ESP8266
 
+Realizamos a montagem do dispositivo no ESP8266 com NodeMCU, e conectando com o sensor DHT11, para obtenção dos dados de Temperatura e Umidade e realizando a conexão com o broker MQTT também, para envio de dados para exibição na interface dashboard do Node-RED, sendo que alguns passos não foram finalizados. Na imagem a seguir temos o ESP8266, com oo DHT e Leds também (mas não foram implementados), o cabo USB para carregamento.
+
  ![ESP8266](ESP8266.jpg)
+
+Para realização de testes também executamos o código no Arduino IDE, para obtenção dos dados do sensor com o ESP8266, o código e a saída foram iguais a realização no dispositivo do Arduino.
+Já para a utilização do protocolo MQTT, para conexão com wifi e envio de dados para o broker, para posteriormente a comunicação ao Node-RED e a exibição desses dados em uma interface gráfica para os usuários. Também foi necessário a utilização de uma rede wifi para o ESP8266. O comando e saída para o MQTT, estão a seguir. 
 
 
 
@@ -123,3 +129,5 @@ https://cloud.ibm.com/registration/payment?state=%2Fdeveloper%2Fwatson%2Flaunch-
 https://cloud.ibm.com/docs/language-translator?topic=language-translator-gettingstarted&locale=pt-BR
 https://www.youtube.com/watch?v=0GpF39U9iaQ
 https://www.youtube.com/watch?v=amNOs-OT3eA
+
+https://www.filipeflop.com/blog/controle-monitoramento-iot-nodemcu-e-mqtt/
