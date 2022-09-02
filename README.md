@@ -25,8 +25,8 @@ Para a implementação do dispositivos utilizamos:
 - Arduino Uno
 - Placa de Ensaio (Protoboard)
 - Sensor DHT11 (Umidade e Temperatura)
-- Leds (Amarelo e Verde)
-- Servo Motor 
+- Leds (Amarelo e Verde) (não implementado)
+- Servo Motor (não implementado) 
 - Resistores (220Ohms e 10 k Ohms)
 - Jumpers/fios (macho-macho)
 - Cabo USB para Arduino
@@ -42,23 +42,11 @@ Utilizamos o modelo de conexão da imagem 2.
 ![Imagem 2](Image2.jpg)
 ![Imagem 5](Image5.jpg)
 
-Iniciamos também a inserção dos leds ao projeto, para avisar quando a umidade relativa estiver baixa (led amarelo) e alta (led verde). não conseguimos fazer funciona-los devido ao tempo. 
+Iniciamos também a inserção dos leds ao projeto, para avisar quando a umidade relativa estiver baixa (led amarelo) e alta (led verde). não conseguimos fazer funciona-los devido ao tempo. Para a conexão dos leds, utilizariamos um resistor de 220Ohms para cada led e fios macho-macho.
 
-Para a conexão dos leds, utilizamos um resistor de 220Ohms para cada led e fios macho-macho, igual o modelo abaixo.
+Também fariamos a inserção do Servo Motor, para ser utilizado apartir de dados da temperatura para o acionamento de algum dispositivo de refrigeração, ventilador ou ar-condicionado. Para ligar o Servo Motor ao Arduino, temos três pinos, sendo eles: um para alimentação no pino de 5V do Arduino, outro para o terra (GND) e o ultimo para o pino 9 porta digital do Arduino. 
 
-![Imagem 1](Imagem1.jpg)
-![Imagem 6](Image6.jpg)
-
-Também faremos a inserção do Servo Motor, para ser utilizado apartir de dados da temperatura para o acionamento de algum dispositivo de refrigeração, ventilador ou ar-condicionado.
-
-Para ligar o Servo Motor ao Arduino, temos três pinos, sendo eles: um para alimentação no pino de 5V do Arduino, outro para o terra (GND) e o ultimo para o pino 9 porta digital do Arduino. Seguindo o modelo abaixo.
-
-![Imagem 4](Image4.jpg)
-![Imagem 7](Image7.jpg)
-
-Para a programação do Arduino. Foi necessário para uma nova versão do programa 'Arduino', e duas bibliotecas para a utilização do sensor: a Biblioteca DHT11 e a AdaFruit. 
-
-A seguir, temos o código utilizado para a execução do sensor. E Também a saída respectiva do sensor, apresentando a temperatura e umidade do ambiente.
+Para a programação do Arduino foi necessário duas bibliotecas para a utilização do sensor: a Biblioteca DHT11 e a AdaFruit. A seguir, temos o código utilizado para a execução do sensor. E Também a saída respectiva do sensor, apresentando a temperatura e umidade do ambiente.
 
 ![Imagem 9](image99.jpg)
 ![Imagem 8](image88.jpg)
@@ -73,7 +61,7 @@ Para a implementação do dispositivos utilizamos:
 - Jumpers/fios (macho-macho)
 - Cabo USB para ESP8266
 
-
+ ![ESP8266](ESP8266.jpg)
 
 
 
@@ -84,13 +72,15 @@ Possui diversas ferramentas que são bem completas e servem para ser implementad
 ### Visual Recognition
 Esta ferramenta  utiliza de deep learning. Quer dizer que é possível fazer análises de imagens. O serviço utiliza de classes padrão, tornando-o capaz de compreender o conteúdo de alguma imagem e também identifica palavras-chave para descrever a imagem. Também é possível treinar o Visual Recognition com imagens adicionadas pelo usuário e depois ajustar para que seja utilizada em algum domínio específico de aplicação, gerando classificadores personalizados.
 #### Utilização
-  
+  ![Serviço IBM](servico1.png)
+
 #### Implementação com projeto
 Esse Serviço de reconhecimento de imagens seria bastante útil na conservação de frutas e legumes, podemos através de imagens dispor de informações para o usuário, send treinado para cada tipo especifico e atribuindo também divisões dos produtos para dicas de ambiente, temperatura adequados. 
 ### Language Translator
 Capaz de traduzir textos entre vários idiomas diferentes e pode ser facilmente inserido em qualquer aplicação. 
 #### Utilização
-  
+  ![Serviço IBM](servico2.png)
+
 #### Implementação com projeto
 Esse Serviço é bastante útil para no caso de tornar as aplicações para serem utilizadas fora do país também, traduzindo os conteúdos em tempo real para a linguagem do usuário, tornando o mais usual e Multi-idiomas.
 
